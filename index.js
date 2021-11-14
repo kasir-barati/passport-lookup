@@ -33,8 +33,8 @@ setInterval(async () => {
 }, 86400000);
 
 createServer((req, res) => {
-  res.write(`${firstName}\n`);
-  res.write(`${lastName}\n`);
-  res.write(`${type}\n`);
+  res.write(`hello world 1\n`);
+  res.write(`hello world 2\n`);
+  res.write(`hello world 3\n`);
   res.end();
 }).listen(3000);
