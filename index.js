@@ -37,4 +37,4 @@ createServer((req, res) => {
   res.write(`hello world 2\n`);
   res.write(`hello world 3\n`);
   res.end();
-}).listen(3000);
+}).listen(process.env.PORT || 3000);
