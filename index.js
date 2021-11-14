@@ -36,4 +36,5 @@ createServer((req, res) => {
   res.write(`${firstName}\n`);
   res.write(`${lastName}\n`);
   res.write(`${type}\n`);
+  res.end();
 }).listen(3000);
