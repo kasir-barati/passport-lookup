@@ -1,4 +1,6 @@
 // @ts-check
+const { createServer } = require("http");
+
 require("dotenv").config();
 const axios = require("axios");
 
@@ -29,3 +31,9 @@ setInterval(async () => {
     }
   }
 }, 86400000);
+
+createServer((req, res) => {
+  res.write(`${firstName}\n`);
+  res.write(`${lastName}\n`);
+  res.write(`${type}\n`);
+}).listen(3000);
